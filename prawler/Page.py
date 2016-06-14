@@ -4,6 +4,7 @@ Created on 2016/06/14
 @author: dk
 '''
 # -*- coding: utf-8 -*-
+
 import requests
 from bs4 import BeautifulSoup
 
@@ -30,3 +31,5 @@ class Page(object):
     def get_title(self):
         return self.html.find("title").text
     
+    def get_contents(self):
+        return self.html.text
